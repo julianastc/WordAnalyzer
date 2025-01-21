@@ -5,37 +5,36 @@ public class Analyzer
     {
         Console.WriteLine("Digite uma frase: ");
         string words = Console.ReadLine();
-       // words = words.Replace(" ", "");
         return words.Trim(); 
     }
     public string LongestWord(string words)
     {
-        List<string> WordList = words.Split(' ').ToList(); 
-        var longWord = WordList.OrderByDescending(s => s.Length).First();
+        List<string> wordList = words.Split(' ').ToList(); 
+        var longWord = wordList.OrderByDescending(s => s.Length).First();
         return longWord;
     }
     public string ShortestWord(string words)
     {
-        List<string> WordList = words.Split(' ').ToList();
-        var shortWord = WordList.OrderByDescending(s => s.Length).Last();
+        List<string> wordList = words.Split(' ').ToList();
+        var shortWord = wordList.OrderByDescending(s => s.Length).Last();
         return shortWord;
     }
     public string FirstWord(string words)
     {
-        List<string> WordList = words.Split(' ').ToList();
-        var first = WordList.First();
+        List<string> wordList = words.Split(' ').ToList();
+        var first = wordList.First();
         return first;
     }
     public string LastWord(string words)
     {
-        List<string> WordList = words.Split(' ').ToList();
-        var last = WordList.Last();
+        List<string> wordList = words.Split(' ').ToList();
+        var last = wordList.Last();
         return last;
     }
     public int QuantityWord(string words)
     {
-        List<string> WordList = words.Split(' ').ToList();
-        var quantityWord = WordList.Count();
+        List<string> wordList = words.Split(' ').ToList();
+        var quantityWord = wordList.Count();
         return quantityWord;
     }
     public int QuantityChar(string words)
@@ -44,7 +43,6 @@ public class Analyzer
     }
     public int AverageChar(string words)
     {
-       // List<string> WordList = words.Split(' ').ToList();
         var quantityWord = QuantityWord(words);
         var quantityChar = QuantityChar(words);
         var average = quantityChar / quantityWord;
